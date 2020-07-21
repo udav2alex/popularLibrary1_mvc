@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements MainView, View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements MainView {
 
     /** Android Views **/
     private TextView tv1;
@@ -30,16 +30,20 @@ public class MainActivity extends AppCompatActivity implements MainView, View.On
         tv3 = findViewById(R.id.tv3);
         btnCounter3 = findViewById(R.id.btnCounter3);
 
-        btnCounter1.setOnClickListener(this);
-        btnCounter2.setOnClickListener(this);
-        btnCounter3.setOnClickListener(this);
+        btnCounter1.setOnClickListener(getOnClickListener(Presenter.Button.ONE));
+        btnCounter2.setOnClickListener(getOnClickListener(Presenter.Button.TWO));
+        btnCounter3.setOnClickListener(getOnClickListener(Presenter.Button.THREE));
 
         mPresenter = new Presenter(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        mPresenter.buttonClick(view.getId());
+    private View.OnClickListener getOnClickListener(final Presenter.Button button) {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mPresenter.buttonClick(button);
+            }
+        };
     }
 
     @Override

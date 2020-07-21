@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/popularLibrary1_mvc.iml" filepath="$PROJECT_DIR$/.idea/modules/popularLibrary1_mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="popularLibrary1_mvc/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/popularLibrary1_mvc.iml" filepath="$PROJECT_DIR$/.idea/modules/popularLibrary1_mvc.iml" group="popularLibrary1_mvc" />
     </modules>
   </component>
 </project>
