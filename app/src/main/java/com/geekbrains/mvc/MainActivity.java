@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements MainView {
 
-    /** Android Views **/
     private TextView tv1;
     private Button btnCounter1;
     private TextView tv2;
